@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReportComponent } from './time-report/report/report.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 import {DemoMaterialModule} from './material-module';
 import { TogglPopupComponent } from './time-report/toggl-popup/toggl-popup.component';
-// import { DevOpsService } from './time-report/service/dev-ops.service';
+import { DevOpsService } from './time-report/service/dev-ops.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TogglPopupComponent } from './time-report/toggl-popup/toggl-popup.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
@@ -30,7 +32,7 @@ import { TogglPopupComponent } from './time-report/toggl-popup/toggl-popup.compo
     }),
     DemoMaterialModule
   ],
-  providers: [],
+  providers: [DevOpsService],
   bootstrap: [AppComponent],
   entryComponents: [TogglPopupComponent]
 })

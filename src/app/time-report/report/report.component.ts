@@ -7,7 +7,7 @@ import {
 import { Subject } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { TogglPopupComponent } from '../toggl-popup/toggl-popup.component';
-//import { DevOpsService } from '../service/dev-ops.service';
+import { DevOpsService } from '../service/dev-ops.service';
 
 @Component({
   selector: 'app-report',
@@ -40,7 +40,7 @@ export class ReportComponent implements OnInit {
   toDate: Date;
 
   refresh: Subject<any> = new Subject();
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public devOpsService: DevOpsService) {}
 
   ngOnInit() {}
 
@@ -55,11 +55,11 @@ export class ReportComponent implements OnInit {
     });
   }
 
-  // public getTask(): void {
-  //   // this.devOpsService
-  //   //   .getTaskById(123)
-  //   //   .subscribe(result => console.log(result));
-  // }
+  public getTask(): void {
+    this.devOpsService
+      .getTaskById(123)
+      .subscribe(result => console.log(result));
+  }
 
   eventTimesChanged({
     event,
