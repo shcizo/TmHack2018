@@ -30,11 +30,11 @@ namespace WebApplication1.Controllers
     public async Task<IActionResult> Get()
     {
         var result = await _service.GetActiveBacklogs();
-      BacklogWorkItems backlogWorkItem = new BacklogWorkItems();
       List<BacklogWorkItems> backlogWorkItemsList = new List<BacklogWorkItems>();
 
         foreach(var workItem in result.WorkItems)
         {
+        BacklogWorkItems backlogWorkItem = new BacklogWorkItems();
         backlogWorkItem.Id = workItem.Target.Id;
         var completeWorkitem = await _service.GetWorkItemByID(backlogWorkItem.Id);
         backlogWorkItem.Title = completeWorkitem.Fields["System.Title"].ToString();
