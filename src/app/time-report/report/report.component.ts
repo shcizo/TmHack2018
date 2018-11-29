@@ -4,11 +4,12 @@ import {
   CalendarEventTimesChangedEvent,
   DAYS_OF_WEEK
 } from 'angular-calendar';
-import { Subject } from 'rxjs';
+import { Subject, of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { TogglPopupComponent } from '../toggl-popup/toggl-popup.component';
 import { TogglService } from '../service/dev-ops.service';
 import { EditEventPopupComponent } from '../edit-event-popup/edit-event-popup.component';
+import { concatMap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-report',
@@ -29,7 +30,7 @@ export class ReportComponent implements OnInit {
   toDate: Date;
 
   refresh: Subject<any> = new Subject();
-  constructor(public dialog: MatDialog, public dialog2: MatDialog, public togglService: TogglService) {}
+  constructor(public dialog: MatDialog, public togglService: TogglService) {}
 
   ngOnInit() {}
 
@@ -39,40 +40,57 @@ export class ReportComponent implements OnInit {
       data: { apiKey: this.apiKey, from: this.fromData, to: this.toDate }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      this.togglService
-        .getToggleReport(result.data, result.from, result.to)
-        .subscribe(r => {
-          this.events = r.data.map(timeEntry => {
+    dialogRef
+      .afterClosed()
+      .pipe(
+        concatMap(result => {
+          return this.togglService.getToggleReport(
+            result.apiKey,
+            result.from,
+            result.to
+          );
+        }),
+        map((timeEntry: any) => {
+          return timeEntry.data.map(e => {
             return {
-              id: timeEntry.id,
-              start: new Date(timeEntry.start),
-              end: new Date(timeEntry.end),
-              title: timeEntry.description,
-              actions: [
-                {
-                  label: '<i class="fa fa-fw fa-pencil"></i>',
-                  onClick: ({ event }: { event: CalendarEvent }): void => {
-                    const dialogRef2 = this.dialog2.open(EditEventPopupComponent, {
-                      width: '300px',
-                      data: event
-                    });
-
-                    dialogRef2.afterClosed().subscribe(e => {
-                      this.events = this.events.map(ee => {
-                        if (ee.id === e.id) {
-                          return e;
-                        }
-                        return ee;
-                      });
-                    });
-                  }
-                }
-              ]
+              id: e.id,
+              start: new Date(e.start),
+              end: new Date(e.end),
+              title: e.description
             };
           });
+        })
+        // concatMap(entries => {
+        //   return entries.map(e => {
+        //     if (Number.isInteger(e.title)) {
+        //       return this.togglService.getTaskInfo(e.title).pipe(
+        //         map(result => {
+        //           return {...e, title: result.System.Title };
+        //         })
+        //       ).subscribe();
+        //     }
+        //     return e;
+        //   });
+        // })
+      )
+      .subscribe(result => {
+        this.events = result;
+        this.events.forEach(event => {
+          const nn = Number(event.title);
+          if (!isNaN(nn)) {
+            this.togglService.getTaskInfo(nn).subscribe(workitem => {
+              if (workitem) {
+                this.events = this.events.map(e => {
+                  if (e.id === event.id) {
+                    return { ...e, title: workitem['System.Title'] };
+                  }
+                  return e;
+                });
+              }
+            });
+          }
         });
-    });
+      });
   }
 
   eventTimesChanged({
