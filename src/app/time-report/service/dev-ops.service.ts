@@ -42,6 +42,11 @@ export class TogglService {
     );
   }
 
+
+  getTasks(): Observable<any> {
+    return this.http.get(`http://localhost:1460/api/values/`);
+  }
+
   public getTaskInfo(id: number): Observable<any> {
     return this.http.get(`http://localhost:1460/api/values/${id}`);
   }

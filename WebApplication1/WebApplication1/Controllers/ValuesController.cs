@@ -52,7 +52,7 @@ namespace WebApplication1.Controllers
       WorkItemModel wim = new WorkItemModel();
       wim.Id = result.Id;
       wim.Title = result.Fields["System.Title"].ToString();
-      wim.RemainingTime = Convert.ToInt32(result.Fields["Microsoft.VSTS.Scheduling.RemainingWork"]);
+     // wim.RemainingTime = Convert.ToInt32(result.Fields["Microsoft.VSTS.Scheduling.RemainingWork"]);
       wim.url = result.Url;
       return Ok(wim);
     }
