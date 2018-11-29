@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.Services.WebApi;
 using Microsoft.TeamFoundation.Core.WebApi.Types;
 using WebApplication1.Services;
 using Microsoft.AspNetCore.Cors;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -37,7 +38,12 @@ namespace WebApplication1.Controllers
     public async Task<IActionResult> Get(int id)
     {
       var result = await _service.GetWorkItemByID(id);
-      return Ok(result);
+      WorkItemModel wim = new WorkItemModel();
+      wim.Id = result.Id;
+      wim.Title = result.Fields["System.Title"].ToString();
+      wim.RemainingTime = Convert.ToInt32(result.Fields["Microsoft.VSTS.Scheduling.RemainingWork"]);
+      wim.url = result.Url;
+      return Ok(wim);
     }
 
     // POST api/values
