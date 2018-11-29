@@ -11,6 +11,7 @@
           <e p="ValuesController.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
+          <e p="backlogWorkItems.cs" t="Include" />
           <e p="ChangedBy.cs" t="Include" />
           <e p="WorkItemModel.cs" t="Include" />
         </e>

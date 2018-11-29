@@ -37,7 +37,7 @@ export class ReportComponent implements OnInit {
 
   ngOnInit() {
     this.togglService.getTasks().subscribe(list => {
-      this.workItems = list.workItems;
+      this.workItems = list;
     });
   }
 
@@ -92,10 +92,10 @@ export class ReportComponent implements OnInit {
       });
   }
 
-  add(id: number) {
+  add(item: any) {
     const dialogRef = this.dialog.open(EditEventPopupComponent, {
       width: '300px',
-      data: { apiKey: this.apiKey, from: this.fromData, to: this.toDate }
+      data: { title: item.title, from: this.fromData, to: this.toDate }
     });
 
     dialogRef.afterClosed().subscribe((data: CalendarEvent) => {

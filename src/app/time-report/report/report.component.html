@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-sm">
           <mat-list *ngIf="workItems" dense>
-            <button mat-list-item (click)="add(item.target.id)" *ngFor="let item of workItems"> Add {{item.target.id}} </button>
+            <button mat-list-item (click)="add(item)" *ngFor="let item of workItems"> Add ({{item.title}}) </button>
           </mat-list>
         </div>
       </div>
