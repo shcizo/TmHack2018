@@ -30,7 +30,18 @@ namespace WebApplication1.Controllers
     public async Task<IActionResult> Get()
     {
         var result = await _service.GetActiveBacklogs();
-        return Ok(result);
+      BacklogWorkItems backlogWorkItem = new BacklogWorkItems();
+      List<BacklogWorkItems> backlogWorkItemsList = new List<BacklogWorkItems>();
+
+        foreach(var workItem in result.WorkItems)
+        {
+        backlogWorkItem.Id = workItem.Target.Id;
+        var completeWorkitem = await _service.GetWorkItemByID(backlogWorkItem.Id);
+        backlogWorkItem.Title = completeWorkitem.Fields["System.Title"].ToString();
+        backlogWorkItemsList.Add(backlogWorkItem);
+        }
+      
+        return Ok(backlogWorkItemsList);
     }
 
     // GET api/values/5
@@ -54,8 +65,10 @@ namespace WebApplication1.Controllers
 
     // PUT api/values/5
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody]string value)
+    public async Task<IActionResult> Put(int id)
     {
+      var result = await _service.UpdateWorkItem(17287);
+      return Ok(result);
     }
 
     // DELETE api/values/5

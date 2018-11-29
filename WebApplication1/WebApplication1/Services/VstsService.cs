@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.JsonPatch.Operations;
 using Microsoft.TeamFoundation.Core.WebApi.Types;
 using Microsoft.TeamFoundation.Work.WebApi;
 using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
@@ -15,6 +16,7 @@ namespace WebApplication1.Services
   {
     Task<WorkItem> GetWorkItemByID(int workItemId);
     Task<BacklogLevelWorkItems> GetActiveBacklogs();
+    Task<WorkItem> UpdateWorkItem(int workItemId);
   }
   public class VstsService: iVstsService
   {
@@ -34,6 +36,7 @@ namespace WebApplication1.Services
     public async Task<WorkItem> GetWorkItemByID(int workItemId)
     {
       WorkItem workitem = await witClient.GetWorkItemAsync(workItemId);
+      
       return workitem;
     }
 
@@ -44,6 +47,15 @@ namespace WebApplication1.Services
 
       BacklogLevelWorkItems backlogLevelWorkItem = await whClient.GetBacklogLevelWorkItemsAsync(tc, "Microsoft.TaskCategory");
       return backlogLevelWorkItem;
+    }
+
+    public async Task<WorkItem> UpdateWorkItem(int workItemId)
+    {
+      Dictionary<string, object> dict = new Dictionary<string, object>();
+      dict.Add("Microsoft.VSTS.Scheduling.RemainingWork", "-9");
+      var document = VssJsonPatchDocumentFactory.ConstructJsonPatchDocument(Microsoft.VisualStudio.Services.WebApi.Patch.Operation.Replace, dict);
+      var result = await witClient.UpdateWorkItemAsync(document, workItemId);
+      return result;
     }
   }
 }
