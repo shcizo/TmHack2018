@@ -11,5 +11,7 @@ namespace WebApplication1.Models
 
     public string Title { get; set; }
 
+    public string AssignedTo { get; set; }
+
   }
 }
