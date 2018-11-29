@@ -41,14 +41,26 @@
       </div>
     </div>
     <div class="col-sm">
-      <button mat-raised-button (click)="openDialog()">
-        Import from Toggl
-      </button>
-    </div>
-    <!--
-      <div class="col-sm">
-          <button mat-raised-button (click)="getTask()">Task</button>
+      <div class="row">
+        <div class="col-sm">
+          <button mat-raised-button (click)="openDialog()">
+            Import from Toggl
+          </button>
+        </div>
       </div>
-    -->
+
+      <div class="row">
+        <div class="col-sm">
+          <mat-list *ngIf="workItems" dense>
+            <button mat-list-item (click)="add(item.target.id)" *ngFor="let item of workItems"> Add {{item.target.id}} </button>
+          </mat-list>
+        </div>
+      </div>
+      <!--
+        <div class="col-sm">
+            <button mat-raised-button (click)="getTask()">Task</button>
+        </div>
+      -->
+    </div>
   </div>
 </div>

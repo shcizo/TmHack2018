@@ -17,11 +17,12 @@ import { concatMap, map, expand, take, takeWhile } from 'rxjs/operators';
   styleUrls: ['./report.component.scss']
 })
 export class ReportComponent implements OnInit {
-  view = 'month';
+  view = 'week';
 
   viewDate: Date = new Date();
 
   events = new Array<CalendarEvent>();
+  workItems: [];
 
   locale = 'en';
 
@@ -34,7 +35,11 @@ export class ReportComponent implements OnInit {
   refresh: Subject<any> = new Subject();
   constructor(public dialog: MatDialog, public togglService: TogglService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.togglService.getTasks().subscribe(list => {
+      this.workItems = list.workItems;
+    });
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(TogglPopupComponent, {
@@ -46,8 +51,11 @@ export class ReportComponent implements OnInit {
       .afterClosed()
       .pipe(
         concatMap(result => {
-          return this.togglService
-            .getToggleReport(result.apiKey, result.from, result.to);
+          return this.togglService.getToggleReport(
+            result.apiKey,
+            result.from,
+            result.to
+          );
         }),
         map((timeEntry: any) => {
           console.log(timeEntry.data);
@@ -64,7 +72,7 @@ export class ReportComponent implements OnInit {
       )
       .subscribe((result: any) => {
         if (result && result.length) {
-          this.events = result;
+          this.events = [...this.events, ...result];
           this.events.forEach(event => {
             const nn = Number(event.title);
             if (!isNaN(nn)) {
@@ -72,7 +80,7 @@ export class ReportComponent implements OnInit {
                 if (workitem) {
                   this.events = this.events.map(e => {
                     if (e.id === event.id) {
-                      return { ...e, title: workitem.fields['System.Title'] };
+                      return { ...e, title: workitem.title };
                     }
                     return e;
                   });
@@ -82,6 +90,17 @@ export class ReportComponent implements OnInit {
           });
         }
       });
+  }
+
+  add(id: number) {
+    const dialogRef = this.dialog.open(EditEventPopupComponent, {
+      width: '300px',
+      data: { apiKey: this.apiKey, from: this.fromData, to: this.toDate }
+    });
+
+    dialogRef.afterClosed().subscribe((data: CalendarEvent) => {
+      this.events = [...this.events, data];
+    });
   }
 
   eventTimesChanged({
