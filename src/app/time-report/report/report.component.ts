@@ -7,7 +7,8 @@ import {
 import { Subject } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { TogglPopupComponent } from '../toggl-popup/toggl-popup.component';
-import { DevOpsService } from '../service/dev-ops.service';
+import { TogglService } from '../service/dev-ops.service';
+import { EditEventPopupComponent } from '../edit-event-popup/edit-event-popup.component';
 
 @Component({
   selector: 'app-report',
@@ -17,19 +18,7 @@ import { DevOpsService } from '../service/dev-ops.service';
 export class ReportComponent implements OnInit {
   viewDate: Date = new Date();
 
-  events: CalendarEvent[] = [
-    {
-      title: 'Draggable event',
-      // color: colors.yellow,
-      start: new Date(),
-      draggable: true
-    },
-    {
-      title: 'A non draggable event',
-      // color: colors.blue,
-      start: new Date()
-    }
-  ];
+  events: CalendarEvent[];
 
   locale = 'en';
 
@@ -40,25 +29,50 @@ export class ReportComponent implements OnInit {
   toDate: Date;
 
   refresh: Subject<any> = new Subject();
-  constructor(public dialog: MatDialog, public devOpsService: DevOpsService) {}
+  constructor(public dialog: MatDialog, public dialog2: MatDialog, public togglService: TogglService) {}
 
   ngOnInit() {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(TogglPopupComponent, {
-      width: '250px',
+      width: '300px',
       data: { apiKey: this.apiKey, from: this.fromData, to: this.toDate }
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-    });
-  }
+      this.togglService
+        .getToggleReport(result.data, result.from, result.to)
+        .subscribe(r => {
+          this.events = r.data.map(timeEntry => {
+            return {
+              id: timeEntry.id,
+              start: new Date(timeEntry.start),
+              end: new Date(timeEntry.end),
+              title: timeEntry.description,
+              actions: [
+                {
+                  label: '<i class="fa fa-fw fa-pencil"></i>',
+                  onClick: ({ event }: { event: CalendarEvent }): void => {
+                    const dialogRef2 = this.dialog2.open(EditEventPopupComponent, {
+                      width: '300px',
+                      data: event
+                    });
 
-  public getTask(): void {
-    this.devOpsService
-      .getTaskById(123)
-      .subscribe(result => console.log(result));
+                    dialogRef2.afterClosed().subscribe(e => {
+                      this.events = this.events.map(ee => {
+                        if (ee.id === e.id) {
+                          return e;
+                        }
+                        return ee;
+                      });
+                    });
+                  }
+                }
+              ]
+            };
+          });
+        });
+    });
   }
 
   eventTimesChanged({
