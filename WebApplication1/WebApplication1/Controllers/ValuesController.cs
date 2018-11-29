@@ -22,11 +22,11 @@ namespace WebApplication1.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public IActionResult Get(string id)
+        public IActionResult Get(int id)
         {
             Uri accountUri = new Uri("https://ntmedia.visualstudio.com");     // Account URL, for example: https://fabrikam.visualstudio.com                
             String personalAccessToken = "rwvch6m3b6dwq2cenjwsy3ik6uo2l3ww3qvewbvhtoetzy3spijq";  // See https://www.visualstudio.com/docs/integrate/get-started/authentication/pats                
-            int workItemId = int.Parse(id);   // ID of a work item, for example: 12
+            int workItemId = id;   // ID of a work item, for example: 12
 
             // Create a connection to the account
             VssConnection connection = new VssConnection(accountUri, new VssBasicCredential(string.Empty, personalAccessToken));
