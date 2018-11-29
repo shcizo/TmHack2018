@@ -10,9 +10,11 @@ using Microsoft.VisualStudio.Services.Common;
 using Microsoft.VisualStudio.Services.WebApi;
 using Microsoft.TeamFoundation.Core.WebApi.Types;
 using WebApplication1.Services;
+using Microsoft.AspNetCore.Cors;
 
 namespace WebApplication1.Controllers
 {
+  [EnableCors("AllowCors")]
   [Route("api/[controller]")]
   public class ValuesController : Controller
   {
@@ -24,35 +26,17 @@ namespace WebApplication1.Controllers
     }
     // GET api/values
     [HttpGet]
-    public IActionResult Get()
+    public async Task<IActionResult> Get()
     {
-        Uri accountUri = new Uri("https://ntmedia.visualstudio.com");     // Account URL, for example: https://fabrikam.visualstudio.com                
-        String personalAccessToken = "rwvch6m3b6dwq2cenjwsy3ik6uo2l3ww3qvewbvhtoetzy3spijq";  // See https://www.visualstudio.com/docs/integrate/get-started/authentication/pats                
-
-        // Create a connection to the account
-        VssConnection connection = new VssConnection(accountUri, new VssBasicCredential(string.Empty, personalAccessToken));
-
-        WorkHttpClient whc = connection.GetClient<WorkHttpClient>();
-
-        TeamContext tc = new TeamContext("DFS");
-        tc.Team = "DFS Team";
-
-        var backlogLevelWorkItem = whc.GetBacklogLevelWorkItemsAsync(tc, "Microsoft.TaskCategory").Result;
-      
-
-        return Ok(backlogLevelWorkItem.WorkItems);
-
+        var result = await _service.GetActiveBacklogs();
+        return Ok(result);
     }
 
     // GET api/values/5
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
-        int workItemId = id;   // ID of a work item, for example: 12
-
-      // Create a connection to the account
-
-     var result = await _service.GetWorkItemByID(id);
+      var result = await _service.GetWorkItemByID(id);
       return Ok(result);
     }
 
