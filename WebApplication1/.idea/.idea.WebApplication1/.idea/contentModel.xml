@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Dev\TMHack2018\WebApplication1" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="WebApplication1" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="WebApplication1.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="VstsService.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Startup.cs.orig" t="Include" />
+        <e p="WebApplication1.csproj" t="IncludeRecursive" />
+        <e p="wwwroot" t="Include" />
+      </e>
+      <e p="WebApplication1.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\samuel.enocsson\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\samuel.enocsson\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_WebApplication1.1648455089.00" t="ExcludeRecursive" />
+  </component>
+</project>

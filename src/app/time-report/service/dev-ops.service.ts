@@ -24,10 +24,12 @@ export class TogglService {
     fromDate: Date,
     toDate: Date
   ): Observable<any> {
+    console.log(apikey);
+
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': 'Basic ' + btoa(`6a784d78f4de3e3347c1fbef661c3f7a:api_token`)
+        'Authorization': 'Basic ' + btoa(`${apikey}:api_token`)
       })
     };
     return this.http.get('https://www.toggl.com/api/v8/me', httpOptions).pipe(
@@ -39,5 +41,9 @@ export class TogglService {
 
       })
     );
+  }
+
+  public getTaskInfo(id: number): Observable<any> {
+    return this.http.get(`http://localhost:1460/api/values/${id}`);
   }
 }
