@@ -22,10 +22,9 @@ export class TogglService {
   public getToggleReport(
     apikey: string,
     fromDate: Date,
-    toDate: Date
+    toDate: Date,
+    page = 1
   ): Observable<any> {
-    console.log(apikey);
-
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -36,7 +35,7 @@ export class TogglService {
       concatMap((user:  any) => {
         const workspace = user.data.workspaces[0];
         return this.http
-            .get(`https://toggl.com/reports/api/v2/details?user_agent="tmhack"&workspace_id=${workspace.id}&since=2018-11-01T00:00:00+01:00&until=2018-11-30T00:00:00+01:00`,
+            .get(`https://toggl.com/reports/api/v2/details?user_agent="tmhack"&workspace_id=${workspace.id}&since=${fromDate.toISOString()}&until=${toDate.toISOString()}&page=${page}`,
               httpOptions);
 
       })

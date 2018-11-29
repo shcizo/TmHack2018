@@ -4,12 +4,12 @@ import {
   CalendarEventTimesChangedEvent,
   DAYS_OF_WEEK
 } from 'angular-calendar';
-import { Subject, of } from 'rxjs';
+import { Subject, of, empty } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { TogglPopupComponent } from '../toggl-popup/toggl-popup.component';
 import { TogglService } from '../service/dev-ops.service';
 import { EditEventPopupComponent } from '../edit-event-popup/edit-event-popup.component';
-import { concatMap, map } from 'rxjs/operators';
+import { concatMap, map, expand, take, takeWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'app-report',
@@ -17,9 +17,11 @@ import { concatMap, map } from 'rxjs/operators';
   styleUrls: ['./report.component.scss']
 })
 export class ReportComponent implements OnInit {
+  view = 'month';
+
   viewDate: Date = new Date();
 
-  events: CalendarEvent[];
+  events = new Array<CalendarEvent>();
 
   locale = 'en';
 
@@ -44,13 +46,12 @@ export class ReportComponent implements OnInit {
       .afterClosed()
       .pipe(
         concatMap(result => {
-          return this.togglService.getToggleReport(
-            result.apiKey,
-            result.from,
-            result.to
-          );
+          return this.togglService
+            .getToggleReport(result.apiKey, result.from, result.to);
         }),
         map((timeEntry: any) => {
+          console.log(timeEntry.data);
+
           return timeEntry.data.map(e => {
             return {
               id: e.id,
@@ -60,36 +61,26 @@ export class ReportComponent implements OnInit {
             };
           });
         })
-        // concatMap(entries => {
-        //   return entries.map(e => {
-        //     if (Number.isInteger(e.title)) {
-        //       return this.togglService.getTaskInfo(e.title).pipe(
-        //         map(result => {
-        //           return {...e, title: result.System.Title };
-        //         })
-        //       ).subscribe();
-        //     }
-        //     return e;
-        //   });
-        // })
       )
-      .subscribe(result => {
-        this.events = result;
-        this.events.forEach(event => {
-          const nn = Number(event.title);
-          if (!isNaN(nn)) {
-            this.togglService.getTaskInfo(nn).subscribe(workitem => {
-              if (workitem) {
-                this.events = this.events.map(e => {
-                  if (e.id === event.id) {
-                    return { ...e, title: workitem.fields['System.Title'] };
-                  }
-                  return e;
-                });
-              }
-            });
-          }
-        });
+      .subscribe((result: any) => {
+        if (result && result.length) {
+          this.events = result;
+          this.events.forEach(event => {
+            const nn = Number(event.title);
+            if (!isNaN(nn)) {
+              this.togglService.getTaskInfo(nn).subscribe(workitem => {
+                if (workitem) {
+                  this.events = this.events.map(e => {
+                    if (e.id === event.id) {
+                      return { ...e, title: workitem.fields['System.Title'] };
+                    }
+                    return e;
+                  });
+                }
+              });
+            }
+          });
+        }
       });
   }
 
