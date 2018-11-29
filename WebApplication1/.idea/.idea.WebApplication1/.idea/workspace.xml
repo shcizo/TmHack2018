@@ -4,45 +4,13 @@
     <list default="true" id="24c1c8cf-0c78-4693-9895-1d09a1057193" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/Controllers/ValuesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Controllers/ValuesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.0/Microsoft.WITDataStore32.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.0/Microsoft.WITDataStore64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.0/WebApplication1.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.0/WebApplication1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.0/WebApplication1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.0/WebApplication1.runtimeconfig.dev.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.0/WebApplication1.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/Microsoft.WITDataStore32.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/Microsoft.WITDataStore64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.0/WebApplication1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.RazorAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.RazorAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/WebApplication1.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/app/time-report/report/report.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/time-report/report/report.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/app/time-report/report/report.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/time-report/report/report.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/time-report/service/dev-ops.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/time-report/service/dev-ops.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,15 +65,13 @@
             <state relative-caret-position="208">
               <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
-                <marker date="1543505036181" expanded="true" signature="6:528" ph="..." />
-                <marker date="1543505036181" expanded="true" signature="567:1741" ph="{...}" />
-                <marker date="1543505036181" expanded="true" signature="672:1739" ph="{...}" />
-                <marker date="1543505036181" expanded="true" signature="771:808" ph="{...}" />
-                <marker date="1543505036181" expanded="true" signature="887:983" ph="{...}" />
-                <marker date="1543505036181" expanded="true" signature="1079:1432" ph="{...}" />
-                <marker date="1543505036181" expanded="true" signature="1516:1528" ph="{...}" />
-                <marker date="1543505036181" expanded="true" signature="1627:1639" ph="{...}" />
-                <marker date="1543505036181" expanded="true" signature="1723:1735" ph="{...}" />
+                <marker date="1543506470404" expanded="true" signature="6:528" ph="..." />
+                <marker date="1543506470404" expanded="true" signature="567:2326" ph="{...}" />
+                <marker date="1543506470404" expanded="true" signature="672:2324" ph="{...}" />
+                <marker date="1543506470404" expanded="true" signature="771:808" ph="{...}" />
+                <marker date="1543506470404" expanded="true" signature="887:957" ph="{...}" />
+                <marker date="1543506470404" expanded="true" signature="2218:2224" ph="{...}" />
+                <marker date="1543506470404" expanded="true" signature="2308:2320" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -150,16 +116,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebApplication1/Services/VstsService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            <state relative-caret-position="288">
+              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
               <folding>
-                <marker date="1543504747880" expanded="true" signature="6:401" ph="..." />
-                <marker date="1543504747880" expanded="true" signature="437:1825" ph="{...}" />
-                <marker date="1543504747880" expanded="true" signature="471:584" ph="{...}" />
-                <marker date="1543504747880" expanded="true" signature="625:1823" ph="{...}" />
-                <marker date="1543504747880" expanded="true" signature="725:1331" ph="{...}" />
-                <marker date="1543504747880" expanded="true" signature="1396:1503" ph="{...}" />
-                <marker date="1543504747880" expanded="true" signature="1569:1819" ph="{...}" />
+                <marker date="1543506470383" expanded="true" signature="6:450" ph="..." />
+                <marker date="1543506470383" expanded="true" signature="486:2393" ph="{...}" />
+                <marker date="1543506470383" expanded="true" signature="520:684" ph="{...}" />
+                <marker date="1543506470383" expanded="true" signature="725:2391" ph="{...}" />
+                <marker date="1543506470383" expanded="true" signature="825:1431" ph="{...}" />
+                <marker date="1543506470383" expanded="true" signature="1496:1610" ph="{...}" />
+                <marker date="1543506470383" expanded="true" signature="1676:1926" ph="{...}" />
+                <marker date="1543506470383" expanded="true" signature="1990:2387" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -333,12 +300,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543493722906</updated>
-      <workItem from="1543493725316" duration="7857000" />
+      <workItem from="1543493725316" duration="8272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7857000" />
+    <option name="totallyTimeSpent" value="8272000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,15 +434,13 @@
         <state relative-caret-position="208">
           <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
-            <marker date="1543505036181" expanded="true" signature="6:528" ph="..." />
-            <marker date="1543505036181" expanded="true" signature="567:1741" ph="{...}" />
-            <marker date="1543505036181" expanded="true" signature="672:1739" ph="{...}" />
-            <marker date="1543505036181" expanded="true" signature="771:808" ph="{...}" />
-            <marker date="1543505036181" expanded="true" signature="887:983" ph="{...}" />
-            <marker date="1543505036181" expanded="true" signature="1079:1432" ph="{...}" />
-            <marker date="1543505036181" expanded="true" signature="1516:1528" ph="{...}" />
-            <marker date="1543505036181" expanded="true" signature="1627:1639" ph="{...}" />
-            <marker date="1543505036181" expanded="true" signature="1723:1735" ph="{...}" />
+            <marker date="1543506470404" expanded="true" signature="6:528" ph="..." />
+            <marker date="1543506470404" expanded="true" signature="567:2326" ph="{...}" />
+            <marker date="1543506470404" expanded="true" signature="672:2324" ph="{...}" />
+            <marker date="1543506470404" expanded="true" signature="771:808" ph="{...}" />
+            <marker date="1543506470404" expanded="true" signature="887:957" ph="{...}" />
+            <marker date="1543506470404" expanded="true" signature="2218:2224" ph="{...}" />
+            <marker date="1543506470404" expanded="true" signature="2308:2320" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -489,16 +454,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebApplication1/Services/VstsService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        <state relative-caret-position="288">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
           <folding>
-            <marker date="1543504747880" expanded="true" signature="6:401" ph="..." />
-            <marker date="1543504747880" expanded="true" signature="437:1825" ph="{...}" />
-            <marker date="1543504747880" expanded="true" signature="471:584" ph="{...}" />
-            <marker date="1543504747880" expanded="true" signature="625:1823" ph="{...}" />
-            <marker date="1543504747880" expanded="true" signature="725:1331" ph="{...}" />
-            <marker date="1543504747880" expanded="true" signature="1396:1503" ph="{...}" />
-            <marker date="1543504747880" expanded="true" signature="1569:1819" ph="{...}" />
+            <marker date="1543506470383" expanded="true" signature="6:450" ph="..." />
+            <marker date="1543506470383" expanded="true" signature="486:2393" ph="{...}" />
+            <marker date="1543506470383" expanded="true" signature="520:684" ph="{...}" />
+            <marker date="1543506470383" expanded="true" signature="725:2391" ph="{...}" />
+            <marker date="1543506470383" expanded="true" signature="825:1431" ph="{...}" />
+            <marker date="1543506470383" expanded="true" signature="1496:1610" ph="{...}" />
+            <marker date="1543506470383" expanded="true" signature="1676:1926" ph="{...}" />
+            <marker date="1543506470383" expanded="true" signature="1990:2387" ph="{...}" />
           </folding>
         </state>
       </provider>
