@@ -14,13 +14,15 @@ import {DemoMaterialModule} from './material-module';
 import { TogglPopupComponent } from './time-report/toggl-popup/toggl-popup.component';
 import { TogglService } from './time-report/service/dev-ops.service';
 import { EditEventPopupComponent } from './time-report/edit-event-popup/edit-event-popup.component';
+import { CalendarHeaderComponent } from './time-report/header';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportComponent,
     TogglPopupComponent,
-    EditEventPopupComponent
+    EditEventPopupComponent,
+    CalendarHeaderComponent
   ],
   imports: [
     BrowserModule,
