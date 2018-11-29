@@ -1,0 +1,20 @@
+<div mat-dialog-content>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Api key" value="qwer234" [(ngModel)]="data.apiKey"/>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="from" placeholder="Choose a date"  [(ngModel)]="data.from"/>
+    <mat-datepicker-toggle matSuffix [for]="from"></mat-datepicker-toggle>
+    <mat-datepicker #from></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="to" placeholder="Choose a date"  [(ngModel)]="data.to"/>
+    <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+    <mat-datepicker #to></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
+    Ok
+  </button>
+</div>

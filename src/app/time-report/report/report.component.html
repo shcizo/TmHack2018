@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <mwl-calendar-week-view
+        [viewDate]="viewDate"
+        [events]="events"
+        [refresh]="refresh"
+        [dayStartHour]="6"
+        [dayEndHour]="18"
+        [locale]="locale"
+        [weekStartsOn]="weekStartsOn"
+        (eventTimesChanged)="eventTimesChanged($event)"
+      >
+      </mwl-calendar-week-view>
+    </div>
+    <div class="col-sm">
+        <button mat-raised-button (click)="openDialog()">Import from Toggl</button>
+    </div>
+    <!-- <div class="col-sm">
+        <button mat-raised-button (click)="getTask()">Task</button>
+    </div> -->
+  </div>
+</div>
