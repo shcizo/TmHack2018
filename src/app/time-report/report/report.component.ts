@@ -82,7 +82,7 @@ export class ReportComponent implements OnInit {
               if (workitem) {
                 this.events = this.events.map(e => {
                   if (e.id === event.id) {
-                    return { ...e, title: workitem['System.Title'] };
+                    return { ...e, title: workitem.fields['System.Title'] };
                   }
                   return e;
                 });

@@ -21,7 +21,11 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Services" t="Include">
+          <e p="VstsService.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
+        <e p="Startup.cs.orig" t="Include" />
         <e p="WebApplication1.csproj" t="IncludeRecursive" />
         <e p="wwwroot" t="Include" />
       </e>
