@@ -12,13 +12,15 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 import {DemoMaterialModule} from './material-module';
 import { TogglPopupComponent } from './time-report/toggl-popup/toggl-popup.component';
-import { DevOpsService } from './time-report/service/dev-ops.service';
+import { TogglService } from './time-report/service/dev-ops.service';
+import { EditEventPopupComponent } from './time-report/edit-event-popup/edit-event-popup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportComponent,
-    TogglPopupComponent
+    TogglPopupComponent,
+    EditEventPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +34,8 @@ import { DevOpsService } from './time-report/service/dev-ops.service';
     }),
     DemoMaterialModule
   ],
-  providers: [DevOpsService],
+  providers: [TogglService],
   bootstrap: [AppComponent],
-  entryComponents: [TogglPopupComponent]
+  entryComponents: [TogglPopupComponent, EditEventPopupComponent]
 })
 export class AppModule { }
