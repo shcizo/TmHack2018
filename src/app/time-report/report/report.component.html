@@ -12,7 +12,7 @@
           [refresh]="refresh"
           [locale]="locale"
           [weekStartsOn]="weekStartsOn"
-          (eventTimesChanged)="eventTimesChanged($event)"
+          (eventTimesChanged)="eventDropped($event)"
         >
         </mwl-calendar-month-view>
         <mwl-calendar-week-view
@@ -24,7 +24,7 @@
           [dayEndHour]="18"
           [locale]="locale"
           [weekStartsOn]="weekStartsOn"
-          (eventTimesChanged)="eventTimesChanged($event)"
+          (eventTimesChanged)="eventDropped($event)"
         >
         </mwl-calendar-week-view>
         <mwl-calendar-day-view
@@ -35,7 +35,7 @@
           [dayStartHour]="6"
           [dayEndHour]="18"
           [locale]="locale"
-          (eventTimesChanged)="eventTimesChanged($event)"
+          (eventTimesChanged)="eventDropped($event)"
         >
         </mwl-calendar-day-view>
       </div>
@@ -52,7 +52,9 @@
       <div class="row">
         <div class="col-sm">
           <mat-list *ngIf="workItems" dense>
-            <button mat-list-item (click)="add(item)" *ngFor="let item of workItems"> Add ({{item.title}}) </button>
+            <mat-list-item *ngFor="let item of workItems">
+              {{ item.title }}
+            </mat-list-item>
           </mat-list>
         </div>
       </div>

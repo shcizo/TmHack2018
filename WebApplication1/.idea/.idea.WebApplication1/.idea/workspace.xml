@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24c1c8cf-0c78-4693-9895-1d09a1057193" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/netcoreapp2.1/WebApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/app/time-report/report/report.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/time-report/report/report.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/app/time-report/report/report.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/time-report/report/report.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,13 +62,13 @@
             <state relative-caret-position="208">
               <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
-                <marker date="1543506470404" expanded="true" signature="6:528" ph="..." />
-                <marker date="1543506470404" expanded="true" signature="567:2326" ph="{...}" />
-                <marker date="1543506470404" expanded="true" signature="672:2324" ph="{...}" />
-                <marker date="1543506470404" expanded="true" signature="771:808" ph="{...}" />
-                <marker date="1543506470404" expanded="true" signature="887:957" ph="{...}" />
-                <marker date="1543506470404" expanded="true" signature="2218:2224" ph="{...}" />
-                <marker date="1543506470404" expanded="true" signature="2308:2320" ph="{...}" />
+                <marker date="1543506879466" expanded="true" signature="6:528" ph="..." />
+                <marker date="1543506879466" expanded="true" signature="567:2328" ph="{...}" />
+                <marker date="1543506879466" expanded="true" signature="672:2326" ph="{...}" />
+                <marker date="1543506879466" expanded="true" signature="771:808" ph="{...}" />
+                <marker date="1543506879466" expanded="true" signature="887:957" ph="{...}" />
+                <marker date="1543506879466" expanded="true" signature="2220:2226" ph="{...}" />
+                <marker date="1543506879466" expanded="true" signature="2310:2322" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -195,7 +192,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="761" />
     <option name="width" value="782" />
     <option name="height" value="419" />
@@ -300,12 +297,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543493722906</updated>
-      <workItem from="1543493725316" duration="8272000" />
+      <workItem from="1543493725316" duration="8513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8272000" />
+    <option name="totallyTimeSpent" value="8513000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,7 +314,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -434,13 +431,13 @@
         <state relative-caret-position="208">
           <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
-            <marker date="1543506470404" expanded="true" signature="6:528" ph="..." />
-            <marker date="1543506470404" expanded="true" signature="567:2326" ph="{...}" />
-            <marker date="1543506470404" expanded="true" signature="672:2324" ph="{...}" />
-            <marker date="1543506470404" expanded="true" signature="771:808" ph="{...}" />
-            <marker date="1543506470404" expanded="true" signature="887:957" ph="{...}" />
-            <marker date="1543506470404" expanded="true" signature="2218:2224" ph="{...}" />
-            <marker date="1543506470404" expanded="true" signature="2308:2320" ph="{...}" />
+            <marker date="1543506879466" expanded="true" signature="6:528" ph="..." />
+            <marker date="1543506879466" expanded="true" signature="567:2328" ph="{...}" />
+            <marker date="1543506879466" expanded="true" signature="672:2326" ph="{...}" />
+            <marker date="1543506879466" expanded="true" signature="771:808" ph="{...}" />
+            <marker date="1543506879466" expanded="true" signature="887:957" ph="{...}" />
+            <marker date="1543506879466" expanded="true" signature="2220:2226" ph="{...}" />
+            <marker date="1543506879466" expanded="true" signature="2310:2322" ph="{...}" />
           </folding>
         </state>
       </provider>

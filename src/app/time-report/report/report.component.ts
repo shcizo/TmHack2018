@@ -103,13 +103,24 @@ export class ReportComponent implements OnInit {
     });
   }
 
-  eventTimesChanged({
+  eventDropped({
     event,
     newStart,
-    newEnd
+    newEnd,
+    allDay
   }: CalendarEventTimesChangedEvent): void {
+    console.log(event);
+
+    if (typeof allDay !== 'undefined') {
+      event.allDay = allDay;
+    }
     event.start = newStart;
-    event.end = newEnd;
-    this.refresh.next();
+    if (newEnd) {
+      event.end = newEnd;
+    }
+    if (this.view === 'month') {
+      this.viewDate = newStart;
+    }
+    this.events = [...this.events];
   }
 }
