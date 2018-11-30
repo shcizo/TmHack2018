@@ -29,7 +29,7 @@ export class ReportComponent implements OnInit {
 
   weekStartsOn: number = DAYS_OF_WEEK.MONDAY;
 
-  apiKey = '6a784d78f4de3e3347c1fbef661c3f7a';
+  apiKey = '';
   fromData: Date;
   toDate: Date;
 
