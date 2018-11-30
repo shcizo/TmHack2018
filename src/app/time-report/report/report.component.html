@@ -46,14 +46,17 @@
           <button mat-raised-button (click)="openDialog()">
             Import from Toggl
           </button>
+          <hr />
         </div>
       </div>
 
       <div class="row">
         <div class="col-sm">
+          <h2>Dev ops Tasks</h2>
+          <mat-spinner *ngIf="isLoading"> </mat-spinner>
           <mat-list *ngIf="workItems" dense>
             <mat-list-item *ngFor="let item of workItems">
-              {{ item.title }}
+              <b>{{ item.title }}</b> ({{ item.assignedTo }})
             </mat-list-item>
           </mat-list>
         </div>

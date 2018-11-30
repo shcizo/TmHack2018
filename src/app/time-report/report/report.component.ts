@@ -19,6 +19,7 @@ import { concatMap, map, expand, take, takeWhile } from 'rxjs/operators';
 export class ReportComponent implements OnInit {
   view = 'week';
 
+  isLoading = false;
   viewDate: Date = new Date();
 
   events = new Array<CalendarEvent>();
@@ -28,7 +29,7 @@ export class ReportComponent implements OnInit {
 
   weekStartsOn: number = DAYS_OF_WEEK.MONDAY;
 
-  apiKey = 'testapi';
+  apiKey = '6a784d78f4de3e3347c1fbef661c3f7a';
   fromData: Date;
   toDate: Date;
 
@@ -36,7 +37,9 @@ export class ReportComponent implements OnInit {
   constructor(public dialog: MatDialog, public togglService: TogglService) {}
 
   ngOnInit() {
+    this.isLoading = true;
     this.togglService.getTasks().subscribe(list => {
+      this.isLoading = false;
       this.workItems = list;
     });
   }
